@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const getComputerChoice = () => {
+            const randomNumber = Math.random();
+            if (randomNumber < 0.33) {
+                return 'rock';
+            }else if (randomNumber < 0.66) {
+                return 'paper';
+            }else {
+                return 'scissors';
+            }
+        }
+
+        function getHumanChoice() {
+            const input = prompt("please pick between `rock`,`paper`, and `scissors`","rock");
+            if (input == 'rock' || input == 'paper' || input == 'scissors') {
+                if (input !== null && input.trim() !== "") {
+                return input;
+                console.log(`user selected ${input}!`);
+            }
+            }else {
+                return null;
+                console.log(`please enter a valid response`);
+            }
+        }
+
+        let humanScore = 0;
+        let computerScore = 0;
+
+        function playRound(humanSelection, computerSelection) {
+            if (humanSelection == computerSelection) {
+                console.log("it's a draw.");
+            }
+            else if ( humanSelection === 'rock' && computerSelection === 'scissors' || humanSelection === 'scissors' && computerSelection === 'paper' || humanSelection === 'paper' && computerSelection === 'rock') {
+                humanScore++;
+                console.log("human wins!");
+            } else {
+                computerScore++;
+                console.log("computer wins!");
+            }
+            console.log(`human: ${humanScore}, computer: ${computerScore}`);
+        }
+
+        for(let i=0; i<5; i++) {
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+        }
+    </script>
+</body>
+</html>
