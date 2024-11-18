@@ -1,0 +1,66 @@
+/* Reset some default styles */
+body, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Button styles */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Results section styles */
+#results {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Results heading styles */
+h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* List styles */
+ul {
+    list-style-type: none; /* Remove default bullets */
+}
+
+/* List item styles */
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
